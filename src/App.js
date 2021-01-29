@@ -8,6 +8,7 @@ function App() {
         <h1> Ardoise </h1>
         <h3>Aucun participant</h3>
         <h3>Aucune dépense</h3>
+          <h3>Aucune créance</h3>
       </div>
   );
 }

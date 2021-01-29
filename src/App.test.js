@@ -9,17 +9,19 @@ function lapplicationContient(texteAttendu) {
 describe("Ardoise vide", () => {
 
   it("Au lancement le titre est afficher",  () => {
-    const texteAttendu = "Ardoise";
-    lapplicationContient(texteAttendu);
+    lapplicationContient("Ardoise");
   });
 
   it("Au lancement, il n'y a aucun participant",  () => {
-    const texteAttendu = "Aucun participant";
-    lapplicationContient(texteAttendu);
+    lapplicationContient("Aucun participant");
   });
 
   it("Au lancement, il n'y a aucune dépenses",  () => {
-    const texteAttendu = "Aucune dépense";
-    lapplicationContient(texteAttendu);
+    lapplicationContient("Aucune dépense");
   });
+
+  it("Au lancement, il n'y a aucune créance",  () => {
+    lapplicationContient("Aucune créance");
+  });
+
 })
