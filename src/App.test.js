@@ -1,8 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render } from '@testing-library/react';
+import App, {TITRE} from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("Ardoise vide", () => {
+
+  it("Au lancement le titre est afficher",  () => {
+    const ui = render(<App/>)
+    expect(ui.container).toHaveTextContent(TITRE)
+  });
+
+  it("Au lancement, il n'y a aucun participant",  () => {
+    const ui = render(<App/>)
+    expect(ui.container).toHaveTextContent("Aucun participant")
+  });
+})
