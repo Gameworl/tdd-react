@@ -1,15 +1,25 @@
 import { render } from '@testing-library/react';
-import App, {TITRE} from './App';
+import App from './App';
+
+function lapplicationContient(texteAttendu) {
+  const ui = render(<App/>)
+  expect(ui.container).toHaveTextContent(texteAttendu)
+}
 
 describe("Ardoise vide", () => {
 
   it("Au lancement le titre est afficher",  () => {
-    const ui = render(<App/>)
-    expect(ui.container).toHaveTextContent(TITRE)
+    const texteAttendu = "Ardoise";
+    lapplicationContient(texteAttendu);
   });
 
   it("Au lancement, il n'y a aucun participant",  () => {
-    const ui = render(<App/>)
-    expect(ui.container).toHaveTextContent("Aucun participant")
+    const texteAttendu = "Aucun participant";
+    lapplicationContient(texteAttendu);
+  });
+
+  it("Au lancement, il n'y a aucune dépenses",  () => {
+    const texteAttendu = "Aucune dépense";
+    lapplicationContient(texteAttendu);
   });
 })
